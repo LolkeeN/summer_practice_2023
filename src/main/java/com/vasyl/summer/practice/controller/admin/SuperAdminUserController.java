@@ -3,7 +3,7 @@ package com.vasyl.summer.practice.controller.admin;
 import com.vasyl.summer.practice.annotation.ControllerInvocationLog;
 import com.vasyl.summer.practice.database.enums.UserRole;
 import com.vasyl.summer.practice.models.AdminUserDto;
-import com.vasyl.summer.practice.models.AdminUserService;
+import com.vasyl.summer.practice.service.AdminUserService;
 import com.vasyl.summer.practice.service.UserInfoService;
 import com.vasyl.summer.practice.service.UserService;
 import lombok.RequiredArgsConstructor;

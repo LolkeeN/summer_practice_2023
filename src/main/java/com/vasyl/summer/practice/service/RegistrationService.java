@@ -53,7 +53,7 @@ public class RegistrationService {
 
     @PostConstruct
     public void registerAdmin() {
-        String adminEmail = "admin@flexychain.com";
+        String adminEmail = "admin@admin.com";
         String adminPartnerId = "admin";
         String adminPassword = "Qaz12345";
 

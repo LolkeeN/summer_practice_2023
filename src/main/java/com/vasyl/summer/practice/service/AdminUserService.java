@@ -1,9 +1,10 @@
-package com.vasyl.summer.practice.models;
+package com.vasyl.summer.practice.service;
 
 import com.vasyl.summer.practice.annotation.InvocationLog;
 import com.vasyl.summer.practice.database.enums.UserRole;
 import com.vasyl.summer.practice.database.repository.UserRepository;
 import com.vasyl.summer.practice.mapper.UserMapper;
+import com.vasyl.summer.practice.models.AdminUserDto;
 import com.vasyl.summer.practice.service.UserService;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;

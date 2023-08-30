@@ -7,7 +7,7 @@ import com.vasyl.summer.practice.database.enums.UserRole;
 import com.vasyl.summer.practice.exceptions.InternalViolationException;
 import com.vasyl.summer.practice.mapper.UserMapper;
 import com.vasyl.summer.practice.models.AdminUserDto;
-import com.vasyl.summer.practice.models.AdminUserService;
+import com.vasyl.summer.practice.service.AdminUserService;
 import com.vasyl.summer.practice.service.UserInfoService;
 import com.vasyl.summer.practice.service.UserQuestionService;
 import com.vasyl.summer.practice.service.UserService;

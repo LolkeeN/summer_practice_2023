@@ -54,4 +54,14 @@ public class SectionService {
     public void deleteSectionById(String id){
         sectionRepository.deleteById(id);
     }
+
+    public Section getSectionById(String sectionId){
+        return sectionRepository.findById(sectionId).orElseThrow(
+                () -> new InternalViolationException(InternalViolationType.SECTION_NOT_FOUND)
+        );
+    }
+
+    public void save(Section section){
+        sectionRepository.save(section);
+    }
 }

@@ -2,6 +2,7 @@ package com.vasyl.summer.practice.service;
 
 import com.vasyl.summer.practice.dao.UserDao;
 import com.vasyl.summer.practice.database.entity.Activity;
+import com.vasyl.summer.practice.database.entity.Section;
 import com.vasyl.summer.practice.database.entity.User;
 import com.vasyl.summer.practice.database.repository.ActivityRepository;
 import com.vasyl.summer.practice.exceptions.InternalViolationException;
@@ -24,6 +25,7 @@ public class ActivityService {
     private final ActivityMapper activityMapper;
     private final UserDao userDao;
     private final SectionMapper sectionMapper;
+    private final SectionService sectionService;
 
     public List<ActivityResponseDto> getAllActivities() {
         List<Activity> activities = (List<Activity>) activityRepository.findAll();
@@ -51,7 +53,12 @@ public class ActivityService {
     public void createActivity(ActivityDto dto) {
         Activity activity = new Activity();
         activityMapper.mapActivityData(dto, activity);
+        Section section = sectionService.getSectionById(dto.getSectionId());
         activityRepository.save(activity);
+        List<Activity> activities = section.getActivities();
+        activities.add(activity);
+        section.setActivities(activities);
+        sectionService.save(section);
     }
 
     public void deleteActivityById(String id) {

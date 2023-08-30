@@ -13,5 +13,6 @@ public class ActivityDto {
     private Date date;
     private int startTime;
     private int endTime;
+    private String sectionId;
     private List<String> userIds;
 }

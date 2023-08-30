@@ -41,7 +41,7 @@ public class UserQuestionService {
 
     public void answerUserQuestion(String id, String text){
         UserQuestion userQuestionById = getUserQuestionById(id);
-        userQuestionById.setText(text);
+        userQuestionById.setAnswer(text);
         userQuestionById.setAnswered(true);
         userQuestionRepository.save(userQuestionById);
     }
